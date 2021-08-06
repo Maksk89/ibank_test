@@ -16,7 +16,7 @@ const loadAccount = (parentEl, data, err) => {
         const retryEl = parentEl.querySelector('.retry');
         retryEl.onclick = (evt) => {
             showLoader(accountsEl);
-            loadAccountServer(evt);
+            loadAccountfromServer(evt);
         };
 
         return;
@@ -29,7 +29,7 @@ const loadAccount = (parentEl, data, err) => {
 };
 
 
-const loadAccountServer = () => {
+const loadAccountfromServer = () => {
 
     fetch(`${API_URL}/hw16`)
 
@@ -50,4 +50,4 @@ const loadAccountServer = () => {
 
 const accountsEl = document.getElementById('accounts-and-cards');
 showLoader(accountsEl);
-loadAccountServer();
+loadAccountfromServer();
