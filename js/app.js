@@ -46,7 +46,7 @@ const loadAccountfromServer = () => {
         .catch((e) => {
             loadAccount(accountsEl, null, 'err.common');
         });
-}
+};
 
 const accountsEl = document.getElementById('accounts-and-cards');
 showLoader(accountsEl);
